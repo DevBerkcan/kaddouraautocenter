@@ -71,6 +71,7 @@ export const vehicles = [
     transmission: "Automatik",
     power: "250 PS",
     image: "/volvo_1.jpeg",
+    alt: "VOLVO XC60 B5 Mild Hybrid 2023 in grau, gepflegter Zustand mit 12.000 km",
     featured: true
   },
   {
@@ -84,6 +85,7 @@ export const vehicles = [
     transmission: "Automatik",
     power: "231 PS",
     image: "/volvo_2.jpeg",
+    alt: "VOLVO XC40 Recharge Pure Electric 2024, Elektrofahrzeug mit nur 5.000 km",
     featured: true
   },
   {
@@ -97,6 +99,7 @@ export const vehicles = [
     transmission: "Automatik",
     power: "197 PS",
     image: "/volvo_3.jpeg",
+    alt: "VOLVO V60 B4 Diesel 2023 Kombi, sparsam und zuverlässig",
     featured: true
   },
   {
@@ -110,6 +113,7 @@ export const vehicles = [
     transmission: "Automatik",
     power: "300 PS",
     image: "/volvo_4.jpeg",
+    alt: "VOLVO XC90 B6 Mild Hybrid 2022, geräumiger Luxus-SUV mit 7 Sitzen",
     featured: true
   },
   {
@@ -123,6 +127,7 @@ export const vehicles = [
     transmission: "Automatik",
     power: "250 PS",
     image: "/volvo_5.jpeg",
+    alt: "VOLVO S60 B5 Mild Hybrid 2023 Limousine, elegant und effizient",
     featured: false
   },
   {
@@ -136,6 +141,7 @@ export const vehicles = [
     transmission: "Automatik",
     power: "197 PS",
     image: "/volvo_6.jpeg",
+    alt: "VOLVO V90 Cross Country 2022, robuster Allrad-Kombi für jedes Gelände",
     featured: false
   }
 ];

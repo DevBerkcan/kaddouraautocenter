@@ -66,6 +66,8 @@ export default function VehiclesSection() {
                   }}
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.4 }}
+                  role="img"
+                  aria-label={vehicle.alt || `${vehicle.brand} ${vehicle.model} ${vehicle.year}`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent
                              group-hover:from-black/40 transition-colors duration-300" />
