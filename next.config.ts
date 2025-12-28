@@ -38,12 +38,6 @@ const nextConfig: NextConfig = {
   // Enable React strict mode
   reactStrictMode: true,
 
-  // Optimize production builds
-  swcMinify: true,
-
-  // Compress output
-  compress: true,
-
   // Production Source Maps (disable for better security)
   productionBrowserSourceMaps: false,
 };
