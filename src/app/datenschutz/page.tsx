@@ -43,7 +43,7 @@ export default function DatenschutzPage() {
                 {siteConfig.address.city}<br /><br />
                 Tel.: {siteConfig.phone}<br />
                 Fax: {siteConfig.fax}<br />
-                E-Mail: {siteConfig.emailAlt}
+                E-Mail: {siteConfig.email}
               </p>
             </section>
 
