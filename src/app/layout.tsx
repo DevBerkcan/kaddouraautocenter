@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { siteConfig } from "@/data/siteData";
+import StructuredData from "@/components/StructuredData";
+import Analytics from "@/components/Analytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -70,6 +72,8 @@ export default function RootLayout({
         <meta name="theme-color" content="#1a1a1a" />
       </head>
       <body className="antialiased">
+        <StructuredData />
+        <Analytics />
         {children}
       </body>
     </html>
