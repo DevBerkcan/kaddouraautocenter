@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Instagram } from "lucide-react";
 import { siteConfig } from "@/data/siteData";
@@ -46,44 +47,24 @@ export default function Header() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? "bg-white/95 backdrop-blur-md shadow-lg" 
-            : "bg-transparent"
+          isScrolled
+            ? "bg-white/95 backdrop-blur-md shadow-lg"
+            : "bg-white/90 backdrop-blur-sm shadow-md"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20 md:h-24">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className={`relative ${isScrolled ? "text-[#1a1a1a]" : "text-white"}`}>
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 md:w-12 md:h-12 border-2 border-current rounded-lg flex items-center justify-center">
-                    <svg 
-                      viewBox="0 0 24 24" 
-                      className="w-6 h-6 md:w-7 md:h-7"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    >
-                      <path d="M5 17a2 2 0 104 0M15 17a2 2 0 104 0M5 17H3v-4l2-6h10l4 6v4h-2M5 17h10" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M9 11V7M15 11V7" strokeLinecap="round"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <span 
-                      className="text-xs md:text-sm tracking-widest opacity-70"
-                      style={{ fontFamily: "var(--font-body)" }}
-                    >
-                      AUTOCENTER
-                    </span>
-                    <h1 
-                      className="text-xl md:text-2xl font-bold tracking-wider -mt-1"
-                      style={{ fontFamily: "var(--font-heading)" }}
-                    >
-                      KADDOURA
-                    </h1>
-                  </div>
-                </div>
+            <Link href="/" className="flex items-center group">
+              <div className="relative h-12 md:h-16 w-auto">
+                <Image
+                  src="/Logo_neu-remove.png"
+                  alt="Autocenter Kaddoura Logo"
+                  width={180}
+                  height={64}
+                  className="h-full w-auto object-contain"
+                  priority
+                />
               </div>
             </Link>
 
@@ -93,9 +74,7 @@ export default function Header() {
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
-                  className={`relative text-sm font-medium tracking-wide transition-colors group ${
-                    isScrolled ? "text-[#1a1a1a]" : "text-white"
-                  }`}
+                  className="relative text-sm font-medium tracking-wide transition-colors group text-[#1a1a1a]"
                 >
                   {item.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#1a1a1a] transition-all duration-300 group-hover:w-full" />
@@ -109,11 +88,7 @@ export default function Header() {
                 href={siteConfig.socialMedia.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-2 rounded-full transition-colors ${
-                  isScrolled 
-                    ? "text-[#1a1a1a] hover:bg-gray-100" 
-                    : "text-white hover:bg-white/10"
-                }`}
+                className="p-2 rounded-full transition-colors text-[#1a1a1a] hover:bg-gray-100"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
@@ -122,11 +97,7 @@ export default function Header() {
                 href={`https://wa.me/${siteConfig.socialMedia.whatsapp?.replace(/\D/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-2 rounded-full transition-colors ${
-                  isScrolled 
-                    ? "text-[#1a1a1a] hover:bg-gray-100" 
-                    : "text-white hover:bg-white/10"
-                }`}
+                className="p-2 rounded-full transition-colors text-[#1a1a1a] hover:bg-gray-100"
                 aria-label="WhatsApp"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -146,11 +117,7 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`lg:hidden p-2 rounded-lg transition-colors ${
-                isScrolled 
-                  ? "text-[#1a1a1a] hover:bg-gray-100" 
-                  : "text-white hover:bg-white/10"
-              }`}
+              className="lg:hidden p-2 rounded-lg transition-colors text-[#1a1a1a] hover:bg-gray-100"
               aria-label="Menü öffnen"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

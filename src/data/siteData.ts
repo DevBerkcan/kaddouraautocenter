@@ -1,20 +1,31 @@
 export const siteConfig = {
   name: "Autocenter Kaddoura",
-  tagline: "Ihr offizieller VOLVO Vertragshändler in Wuppertal",
-  description: "Entdecken Sie die Welt von VOLVO bei Autocenter Kaddoura. Qualität, Vertrauen und Service seit Jahren in Wuppertal.",
+  tagline: "Ihr vertrauensvoller Partner für hochwertige Jahres- und Gebrauchtwagen seit über 25 Jahren",
+  description: "Entdecken Sie hochwertige Jahres- und Gebrauchtwagen bei Autocenter Kaddoura. Qualität, Vertrauen und Service seit über 25 Jahren in Wuppertal.",
   url: "https://www.autocenterkaddoura.de",
-  mobileDeUrl: "https://www.mobile.de/haendler/autocenter-kaddoura-12345",
-  phone: "+49 202 1234567",
-  email: "info@autocenterkaddoura.de",
+  mobileDeUrl: "https://home.mobile.de/KADDOURA#ses",
+  phone: "+49 157 37015935",
+  mobile: "+49 (0)202 2443611",
+  fax: "+49 (0)202 2443613",
+  email: "info@autocenter-kaddoura.de",
+  emailSales: "rami@autocenter-kaddoura.de",
   address: {
-    street: "Vohwinkeler Str. 126",
-    city: "42329 Wuppertal",
+    street: "Friedrich-Ebert-Straße 150",
+    city: "42117 Wuppertal",
     country: "Deutschland"
   },
   coordinates: {
-    lat: 51.2372,
-    lng: 7.0727
+    lat: 51.2639,
+    lng: 7.1467
   },
+  vatId: "DE453978437",
+  taxNumber: "5132/5149/3299",
+  languages: ["Deutsch", "English", "العربية"],
+  mobileDeVisitors: "379297 Besucher seit 22.05.2000",
+  mobileDeRating: 4.5,
+  googleRating: 4.5,
+  googleReviews: 320,
+  googleBusinessUrl: "https://www.google.com/search?sa=X&sca_esv=d412fff20e7449cb&q=Autocenter+Kaddoura+Rezensionen&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2NjYzNTM1MLMwtTAyMTAzNDI038DI-IpR3rG0JD85Na8ktUjBOzElJb-0KFEhKLUqNa84Mz8vNW8RKyEVAEHMAQxeAAAA&rldimm=3365650685824061217&tbm=lcl&hl=de-DE&ved=2ahUKEwi-xbnio-CRAxVd2wIHHXtTARAQ9fQKegQIJxAG",
   socialMedia: {
     instagram: "https://instagram.com/autocenterkaddoura",
     whatsapp: "https://wa.me/49202XXXXXXX"
@@ -36,7 +47,9 @@ export const siteConfig = {
     legal: [
       { name: "Impressum", href: "/impressum" },
       { name: "Datenschutz", href: "/datenschutz" },
-      { name: "AGB", href: "/agb" }
+      { name: "Cookie-Einstellungen", href: "/cookies-einstellungen" },
+      { name: "AGB", href: "/agb" },
+      { name: "Widerruf", href: "/widerruf" }
     ],
     quicklinks: [
       { name: "Alle Fahrzeuge", href: "#fahrzeuge" },
@@ -57,7 +70,7 @@ export const vehicles = [
     fuel: "Benzin/Hybrid",
     transmission: "Automatik",
     power: "250 PS",
-    image: "/images/vehicles/volvo-xc60.jpg",
+    image: "/volvo_1.jpeg",
     featured: true
   },
   {
@@ -70,7 +83,7 @@ export const vehicles = [
     fuel: "Elektro",
     transmission: "Automatik",
     power: "231 PS",
-    image: "/images/vehicles/volvo-xc40-electric.jpg",
+    image: "/volvo_2.jpeg",
     featured: true
   },
   {
@@ -83,7 +96,7 @@ export const vehicles = [
     fuel: "Diesel",
     transmission: "Automatik",
     power: "197 PS",
-    image: "/images/vehicles/volvo-v60.jpg",
+    image: "/volvo_3.jpeg",
     featured: true
   },
   {
@@ -96,7 +109,7 @@ export const vehicles = [
     fuel: "Benzin/Hybrid",
     transmission: "Automatik",
     power: "300 PS",
-    image: "/images/vehicles/volvo-xc90.jpg",
+    image: "/volvo_4.jpeg",
     featured: true
   },
   {
@@ -109,7 +122,7 @@ export const vehicles = [
     fuel: "Benzin/Hybrid",
     transmission: "Automatik",
     power: "250 PS",
-    image: "/images/vehicles/volvo-s60.jpg",
+    image: "/volvo_5.jpeg",
     featured: false
   },
   {
@@ -122,31 +135,41 @@ export const vehicles = [
     fuel: "Diesel",
     transmission: "Automatik",
     power: "197 PS",
-    image: "/images/vehicles/volvo-v90.jpg",
+    image: "/volvo_6.jpeg",
     featured: false
   }
 ];
 
 export const services = [
   {
-    title: "Fahrzeugankauf",
-    description: "Wir kaufen Ihr Fahrzeug zu fairen Preisen. Schnell, unkompliziert und seriös.",
-    icon: "car"
+    title: "Faire Inzahlungnahme Ihres Fahrzeugs",
+    description: "Wir bewerten Ihr Auto transparent und bieten Ihnen einen fairen Preis. Gerne nehmen wir Ihr aktuelles Fahrzeug in Zahlung.",
+    icon: "refresh"
   },
   {
-    title: "Finanzierung",
-    description: "Flexible Finanzierungslösungen passend zu Ihrem Budget.",
-    icon: "banknote"
+    title: "Online-Besichtigungen per WhatsApp-Video",
+    description: "Sehen Sie Ihr Wunschfahrzeug bequem von zu Hause aus live und in Echtzeit. Kontaktieren Sie uns einfach per WhatsApp.",
+    icon: "video"
   },
   {
-    title: "Garantie",
-    description: "Alle unsere Fahrzeuge kommen mit umfassender Garantie.",
+    title: "Internationaler Fahrzeugverkauf",
+    description: "Verkaufen Sie Ihr Fahrzeug unkompliziert ins Ausland. Wir kümmern uns um Netto-Abrechnung, Ausfuhrdokumente und alle Formalitäten für Nicht-EU-Länder.",
+    icon: "plane"
+  },
+  {
+    title: "Rundum-Service für Ihr Fahrzeug",
+    description: "Auf Wunsch kümmern wir uns um TÜV, Inspektion, DEKRA-Gebrauchtwagencheck, Zulassung und bieten optional eine Gebrauchtwagengarantie für maximale Sicherheit und Komfort.",
     icon: "shield"
   },
   {
-    title: "Inzahlungnahme",
-    description: "Ihr altes Fahrzeug wird fair bewertet und in Zahlung genommen.",
-    icon: "refresh"
+    title: "Zulassungsdienst",
+    description: "In Zusammenarbeit mit dem Zulassungsdienst sind wir in der Lage in den umliegenden Kreisen die Zulassung Ihres Fahrzeuges durchzuführen. So sparen Sie sich zeitraubende Behördengänge.",
+    icon: "clipboard"
+  },
+  {
+    title: "Finanzierung",
+    description: "Flexible Finanzierungslösungen passend zu Ihrem Budget. Wir beraten Sie gerne und finden gemeinsam die beste Lösung für Sie.",
+    icon: "banknote"
   }
 ];
 
@@ -206,21 +229,15 @@ export const galleryImages = [
 
 export const teamMembers = [
   {
-    name: "Hassan Kaddoura",
+    name: "Ahmad Kaddoura",
     role: "Geschäftsführer",
-    image: "/images/team/hassan.jpg",
-    description: "Ihr Ansprechpartner für alle Fragen rund um VOLVO und unseren Service."
+    image: "/chef.jpeg",
+    description: "Geschäftsführer und Ihr Hauptansprechpartner für alle Fragen rund um hochwertige Fahrzeuge und unseren Service."
   },
   {
-    name: "Team Verkauf",
-    role: "Verkaufsberatung",
-    image: "/images/team/sales.jpg",
-    description: "Kompetente Beratung für Ihren neuen VOLVO - persönlich und individuell."
-  },
-  {
-    name: "Team Service",
-    role: "Werkstatt & Service",
-    image: "/images/team/service.jpg",
-    description: "Professioneller Service und Wartung für Ihr VOLVO Fahrzeug."
+    name: "Rami Kaddoura",
+    role: "Geschäftsführer",
+    image: "/images_rami.jpeg",
+    description: "Geschäftsführer mit langjähriger Expertise im Automobilhandel und persönlicher Kundenbetreuung."
   }
 ];

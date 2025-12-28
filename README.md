@@ -100,4 +100,4 @@ vercel
 
 ## 📄 Lizenz
 
-© 2025 Autocenter Kaddoura. Alle Rechte vorbehalten.
+© 2026 Autocenter Kaddoura. Alle Rechte vorbehalten.

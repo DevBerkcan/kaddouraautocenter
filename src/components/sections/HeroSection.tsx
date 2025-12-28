@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronDown, ExternalLink } from "lucide-react";
+import { ChevronDown, ExternalLink, Star, Users } from "lucide-react";
 import { siteConfig } from "@/data/siteData";
 
 export default function HeroSection() {
@@ -16,10 +16,10 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2083&auto=format&fit=crop')`,
+            backgroundImage: `url('/herosectionimg.jpg')`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
@@ -78,33 +78,71 @@ export default function HeroSection() {
                      rounded-xl hover:bg-gray-200 transition-all duration-300 hover:scale-105
                      shadow-lg shadow-white/20 hover:shadow-xl hover:shadow-white/30"
           >
-            Alle Fahrzeuge ansehen
+            Zu unseren Fahrzeugen auf Mobile.de
             <ExternalLink className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </a>
-          
+
           <button
             onClick={() => {
               const kontakt = document.getElementById("kontakt");
               if (kontakt) kontakt.scrollIntoView({ behavior: "smooth" });
             }}
-            className="inline-flex items-center gap-3 px-8 py-4 border-2 border-white text-white font-semibold 
+            className="inline-flex items-center gap-3 px-8 py-4 border-2 border-white text-white font-semibold
                      rounded-xl hover:bg-white hover:text-[#1a1a1a] transition-all duration-300"
           >
             Kontakt aufnehmen
           </button>
         </motion.div>
 
+        {/* Trust Badges */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+          className="mt-8 flex items-center justify-center gap-4 flex-wrap"
+        >
+          <a
+            href={siteConfig.mobileDeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20
+                     rounded-full px-6 py-3 hover:bg-white/20 transition-colors group"
+          >
+            <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+            <span className="text-white font-semibold">{siteConfig.mobileDeRating}/5</span>
+            <span className="text-white/60 text-sm group-hover:text-white/80 transition-colors">auf Mobile.de</span>
+          </a>
+
+          <a
+            href={siteConfig.googleBusinessUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20
+                     rounded-full px-6 py-3 hover:bg-white/20 transition-colors group"
+          >
+            <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+            <span className="text-white font-semibold">{siteConfig.googleRating}/5</span>
+            <span className="text-white/60 text-sm group-hover:text-white/80 transition-colors">Google ({siteConfig.googleReviews})</span>
+          </a>
+
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20
+                        rounded-full px-6 py-3">
+            <Users className="w-5 h-5 text-white" />
+            <span className="text-white/60 text-sm">{siteConfig.mobileDeVisitors}</span>
+          </div>
+        </motion.div>
+
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="mt-20 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
+          transition={{ duration: 0.8, delay: 1.1 }}
+          className="mt-16 grid grid-cols-3 gap-8 max-w-3xl mx-auto"
         >
           {[
-            { value: "10+", label: "Jahre Erfahrung" },
-            { value: "500+", label: "Zufriedene Kunden" },
-            { value: "100%", label: "Qualitätsgarantie" },
+            { value: "25+", label: "Jahre Erfahrung" },
+            { value: "379.000+", label: "Besucher" },
+            { value: "100%", label: "Familienunternehmen" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div

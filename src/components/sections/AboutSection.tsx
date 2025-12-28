@@ -1,27 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle, Users, Trophy, Heart, Target, Sparkles } from "lucide-react";
+import { CheckCircle, Heart, Shield, Users, Clock } from "lucide-react";
 
-const stats = [
-  { value: "10+", label: "Jahre Erfahrung", icon: Trophy },
-  { value: "500+", label: "Zufriedene Kunden", icon: Users },
-  { value: "1000+", label: "Verkaufte Fahrzeuge", icon: Target },
-  { value: "100%", label: "Leidenschaft", icon: Heart },
+const services = [
+  "Faire Inzahlungnahme Ihres Fahrzeugs",
+  "Online-Besichtigungen per WhatsApp-Video",
+  "Internationaler Fahrzeugverkauf",
+  "Rundum-Service (TÜV, Inspektion, DEKRA, Zulassung)"
 ];
 
-const values = [
-  "Ehrliche und transparente Beratung",
-  "Faire und marktgerechte Preise",
-  "Geprüfte Qualitätsfahrzeuge",
-  "Kundenservice an erster Stelle",
-  "Schnelle und unkomplizierte Abwicklung",
-  "Langjährige Expertise im Autohandel",
+const qualities = [
+  { icon: Heart, label: "Familienunternehmen seit über 25 Jahren" },
+  { icon: Shield, label: "Professionalität & Zuverlässigkeit" },
+  { icon: Users, label: "Persönlicher Service & ehrliche Beratung" },
+  { icon: Clock, label: "Transparente Abläufe" }
 ];
 
 export default function AboutSection() {
   return (
-    <section id="ueber-uns" className="py-20 md:py-32 bg-gradient-to-br from-[#fafafa] to-white relative overflow-hidden">
+    <section id="ueber-uns" className="py-20 md:py-32 bg-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -30,142 +28,163 @@ export default function AboutSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image Side */}
+        {/* Header */}
+        <div className="text-center mb-16">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-block px-4 py-2 bg-gray-100 text-[#1a1a1a] text-sm font-semibold
+                       tracking-widest uppercase rounded-full mb-4"
+          >
+            Über Uns
+          </motion.span>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a1a1a] mb-6 tracking-wide"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            HERZLICH WILLKOMMEN!
+          </motion.h2>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
+          {/* Content Side */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
           >
-            <div className="relative">
-              {/* Main Image */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/20">
-                <div 
-                  className="aspect-[4/3] bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1560958089-b8a1929cea89?q=80&w=1200&auto=format&fit=crop')`,
-                  }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/80 via-transparent to-transparent" />
-                
-                {/* Overlay Badge */}
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                        <Sparkles className="w-6 h-6 text-[#1a1a1a]" />
-                      </div>
-                      <div>
-                        <p className="text-white font-bold text-lg">VOLVO Vertragshändler</p>
-                        <p className="text-white/70 text-sm">Mit Herz & Leidenschaft</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <p className="text-lg text-[#6b6b6b] mb-6 leading-relaxed">
+              Wir sind seit mehr als <strong className="text-[#1a1a1a]">25 Jahren</strong> Ihr vertrauensvoller
+              Partner, wenn es um hochwertige Jahres- und Gebrauchtwagen geht. Unser Familienunternehmen steht für
+              <strong className="text-[#1a1a1a]"> Professionalität, Kompetenz und Zuverlässigkeit</strong>.
+              Diese Werte leben wir täglich und geben unseren Kunden damit echte Sicherheit.
+            </p>
 
-              {/* Floating Card */}
-              <div className="absolute -bottom-8 -right-8 bg-white rounded-2xl shadow-xl p-6 max-w-xs hidden lg:block">
-                <div className="flex items-center gap-4 mb-3">
-                  <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center">
-                    <Trophy className="w-6 h-6 text-[#1a1a1a]" />
-                  </div>
-                  <div>
-                    <p 
-                      className="text-2xl font-bold text-[#1a1a1a]"
-                      style={{ fontFamily: "var(--font-heading)" }}
-                    >
-                      10+ Jahre
-                    </p>
-                    <p className="text-[#6b6b6b] text-sm">Erfahrung</p>
-                  </div>
-                </div>
-                <p className="text-[#6b6b6b] text-sm">
-                  Vertrauen Sie auf unsere langjährige Expertise im Automobilhandel.
-                </p>
-              </div>
+            <p className="text-lg text-[#6b6b6b] mb-6 leading-relaxed">
+              Bei uns finden Sie eine sorgfältig ausgewählte Fahrzeugpalette, persönlichen Service, ehrliche
+              Beratung und transparente Abläufe. <strong className="text-[#1a1a1a]">Ihre Zufriedenheit steht
+              für uns an erster Stelle.</strong> Ob Kauf, Verkauf oder Beratung – wir begleiten Sie von
+              Anfang an und sorgen dafür, dass Sie das Fahrzeug finden, das perfekt zu Ihnen passt.
+            </p>
 
-              {/* Decorative Elements */}
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-gray-200 rounded-full blur-2xl" />
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gray-100 rounded-full blur-3xl" />
+            <p className="text-lg text-[#1a1a1a] font-semibold mb-8">
+              Wir freuen uns darauf, Sie persönlich bei uns begrüßen zu dürfen.
+            </p>
+
+            {/* Qualities Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {qualities.map((quality, index) => (
+                <motion.div
+                  key={quality.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl"
+                >
+                  <div className="flex-shrink-0 w-10 h-10 bg-[#1a1a1a] rounded-lg flex items-center justify-center">
+                    <quality.icon className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-[#1a1a1a] text-sm font-medium">{quality.label}</span>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
 
-          {/* Content Side */}
+          {/* Image Side */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="relative"
           >
-            <span className="inline-block px-4 py-2 bg-gray-100 text-[#1a1a1a] text-sm font-semibold
-                           tracking-widest uppercase rounded-full mb-4">
-              Über Uns
-            </span>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/20">
+              <div
+                className="aspect-[4/3] bg-cover bg-center"
+                style={{
+                  backgroundImage: `url('/newimg.jpeg')`,
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/60 via-transparent to-transparent" />
 
-            <h2
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a1a1a] mb-6 tracking-wide"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              IHR VERTRAUEN IST
-              <span className="text-[#4a4a4a]"> UNSER ANTRIEB</span>
-            </h2>
-
-            <p className="text-lg text-[#6b6b6b] mb-6 leading-relaxed">
-              Das Autocenter Kaddoura steht seit über einem Jahrzehnt für Qualität, 
-              Vertrauen und erstklassigen Service im Automobilhandel. Als familiengeführtes 
-              Unternehmen in Wuppertal liegt uns die Zufriedenheit unserer Kunden besonders am Herzen.
-            </p>
-
-            <p className="text-[#6b6b6b] mb-8 leading-relaxed">
-              Bei uns finden Sie sorgfältig ausgewählte Gebrauchtwagen zu fairen Preisen. 
-              Jedes Fahrzeug wird vor dem Verkauf gründlich geprüft und aufbereitet. 
-              Unser Ziel ist es, dass Sie mit Ihrem neuen Fahrzeug rundum zufrieden sind.
-            </p>
-
-            {/* Values List */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
-              {values.map((value, index) => (
-                <motion.div
-                  key={value}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-center gap-3"
-                >
-                  <CheckCircle className="w-5 h-5 text-[#1a1a1a] flex-shrink-0" />
-                  <span className="text-[#1a1a1a] text-sm font-medium">{value}</span>
-                </motion.div>
-              ))}
+              {/* Overlay Badge */}
+              <div className="absolute bottom-6 left-6 right-6">
+                <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+                      <Heart className="w-6 h-6 text-[#1a1a1a]" />
+                    </div>
+                    <div>
+                      <p className="text-white font-bold text-lg">25+ Jahre Erfahrung</p>
+                      <p className="text-white/70 text-sm">Familienunternehmen seit 2000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-4 gap-4">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="text-center p-4 bg-[#1a1a1a] rounded-xl"
-                >
-                  <stat.icon className="w-6 h-6 text-white mx-auto mb-2" />
-                  <p 
-                    className="text-2xl font-bold text-white"
-                    style={{ fontFamily: "var(--font-heading)" }}
-                  >
-                    {stat.value}
-                  </p>
-                  <p className="text-gray-400 text-xs mt-1">{stat.label}</p>
-                </motion.div>
-              ))}
-            </div>
+            {/* Decorative Elements */}
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-gray-200 rounded-full blur-2xl" />
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gray-100 rounded-full blur-3xl" />
           </motion.div>
         </div>
+
+        {/* Services Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="bg-[#1a1a1a] rounded-3xl p-8 md:p-12"
+        >
+          <h3
+            className="text-3xl md:text-4xl font-bold text-white mb-8 text-center tracking-wide"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            UNSERE SERVICES FÜR SIE
+          </h3>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {services.map((service, index) => (
+              <motion.div
+                key={service}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className="flex items-start gap-3 p-4 bg-white/5 backdrop-blur-sm rounded-xl
+                         border border-white/10 hover:bg-white/10 transition-colors"
+              >
+                <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-0.5" />
+                <p className="text-white text-sm md:text-base leading-relaxed">{service}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-8 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10"
+          >
+            <p className="text-white/90 text-center leading-relaxed">
+              <strong className="text-white">Transparente Bewertung:</strong> Wir bewerten Ihr Auto transparent
+              und bieten Ihnen einen fairen Preis.
+              <br />
+              <strong className="text-white">Rundum-Sorglos:</strong> Auf Wunsch kümmern wir uns um TÜV,
+              Inspektion, DEKRA-Gebrauchtwagencheck, Zulassung und bieten optional eine Gebrauchtwagengarantie
+              für maximale Sicherheit und Komfort.
+            </p>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

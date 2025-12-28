@@ -8,8 +8,8 @@ export default function NotFound() {
       <Header />
       <main className="min-h-screen flex items-center justify-center bg-[#fafafa] pt-20">
         <div className="text-center px-4">
-          <h1 
-            className="text-8xl md:text-9xl font-bold text-[#c9a227] mb-4"
+          <h1
+            className="text-8xl md:text-9xl font-bold text-[#1a1a1a] mb-4"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             404
@@ -25,8 +25,8 @@ export default function NotFound() {
           </p>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#c9a227] text-white font-semibold 
-                     rounded-xl hover:bg-[#a68520] transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#1a1a1a] text-white font-semibold
+                     rounded-xl hover:bg-[#2d2d2d] transition-colors"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

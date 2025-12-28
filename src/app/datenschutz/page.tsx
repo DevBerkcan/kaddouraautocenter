@@ -15,9 +15,9 @@ export default function DatenschutzPage() {
       <Header />
       <main className="pt-32 pb-20 bg-[#fafafa] min-h-screen">
         <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
-          <Link 
+          <Link
             href="/"
-            className="inline-flex items-center gap-2 text-[#c9a227] hover:text-[#a68520] mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-[#1a1a1a] hover:text-[#2d2d2d] mb-8 transition-colors"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -25,7 +25,7 @@ export default function DatenschutzPage() {
             Zurück zur Startseite
           </Link>
 
-          <h1 
+          <h1
             className="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-8 tracking-wide"
             style={{ fontFamily: "var(--font-heading)" }}
           >
@@ -34,135 +34,242 @@ export default function DatenschutzPage() {
 
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg shadow-black/5 space-y-8">
             <section>
-              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">1. Datenschutz auf einen Blick</h2>
-              
-              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Allgemeine Hinweise</h3>
+              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Verantwortliche Stelle</h2>
               <p className="text-[#6b6b6b] leading-relaxed">
-                Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren 
-                personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene 
-                Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
-              </p>
-
-              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Datenerfassung auf dieser Website</h3>
-              <p className="text-[#6b6b6b] leading-relaxed">
-                <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br />
-                Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. 
-                Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle" 
-                in dieser Datenschutzerklärung entnehmen.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">2. Hosting</h2>
-              <p className="text-[#6b6b6b] leading-relaxed">
-                Wir hosten die Inhalte unserer Website bei folgendem Anbieter:<br /><br />
-                <strong>Externes Hosting</strong><br />
-                Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser 
-                Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei 
-                kann es sich v.a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, 
-                Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über 
-                eine Website generiert werden, handeln.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">3. Allgemeine Hinweise und Pflichtinformationen</h2>
-              
-              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Datenschutz</h3>
-              <p className="text-[#6b6b6b] leading-relaxed">
-                Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. 
-                Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den 
-                gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
-              </p>
-
-              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Hinweis zur verantwortlichen Stelle</h3>
-              <p className="text-[#6b6b6b] leading-relaxed">
-                Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:<br /><br />
-                {siteConfig.name}<br />
+                Verantwortliche Stelle im Sinne der Datenschutzgesetze, insbesondere der
+                EU-Datenschutzgrundverordnung (DSGVO), ist:<br /><br />
+                Ahmad Kaddoura<br />
                 {siteConfig.address.street}<br />
                 {siteConfig.address.city}<br /><br />
-                Telefon: {siteConfig.phone}<br />
-                E-Mail: {siteConfig.email}
+                Tel.: {siteConfig.phone}<br />
+                Fax: {siteConfig.fax}<br />
+                E-Mail: {siteConfig.emailAlt}
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">4. Datenerfassung auf dieser Website</h2>
-              
-              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Cookies</h3>
-              <p className="text-[#6b6b6b] leading-relaxed">
-                Unsere Internetseiten verwenden so genannte „Cookies". Cookies sind kleine 
-                Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder 
-                vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft 
-                (permanente Cookies) auf Ihrem Endgerät gespeichert. Session-Cookies werden nach 
-                Ende Ihres Besuchs automatisch gelöscht. Permanente Cookies bleiben auf Ihrem 
-                Endgerät gespeichert, bis Sie diese selbst löschen oder eine automatische Löschung 
-                durch Ihren Webbrowser erfolgt.<br /><br />
-                Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies 
-                informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies 
-                für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der 
-                Cookies beim Schließen des Browsers aktivieren.
+              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Ihre Betroffenenrechte</h2>
+              <p className="text-[#6b6b6b] leading-relaxed mb-4">
+                Unter den angegebenen Kontaktdaten können Sie jederzeit folgende Rechte ausüben:
               </p>
-
-              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Kontaktformular</h3>
-              <p className="text-[#6b6b6b] leading-relaxed">
-                Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus 
-                dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks 
-                Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. 
-                Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
-              </p>
-
-              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Anfrage per E-Mail, Telefon oder Telefax</h3>
-              <p className="text-[#6b6b6b] leading-relaxed">
-                Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage 
-                inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum 
-                Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet.
+              <ul className="list-disc list-inside text-[#6b6b6b] leading-relaxed space-y-2 ml-4">
+                <li>Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung (Art. 15 DSGVO)</li>
+                <li>Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO)</li>
+                <li>Löschung Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO)</li>
+                <li>Einschränkung der Datenverarbeitung, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht löschen dürfen (Art. 18 DSGVO)</li>
+                <li>Widerspruch gegen die Verarbeitung Ihrer Daten bei uns (Art. 21 DSGVO)</li>
+                <li>Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben (Art. 20 DSGVO)</li>
+              </ul>
+              <p className="text-[#6b6b6b] leading-relaxed mt-4">
+                Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen.<br /><br />
+                Sie können sich jederzeit mit einer Beschwerde an eine Aufsichtsbehörde wenden, z. B. an die zuständige
+                Aufsichtsbehörde des Bundeslands Ihres Wohnsitzes oder an die für uns als verantwortliche Stelle zuständige Behörde.<br /><br />
+                Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen Bereich) mit Anschrift finden Sie unter:{" "}
+                <a
+                  href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#1a1a1a] hover:underline"
+                >
+                  https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html
+                </a>
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">5. Analyse-Tools und Werbung</h2>
+              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Erfassung allgemeiner Informationen beim Besuch unserer Website</h2>
+              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Art und Zweck der Verarbeitung:</h3>
+              <p className="text-[#6b6b6b] leading-relaxed mb-4">
+                Wenn Sie auf unsere Website zugreifen, d.h., wenn Sie sich nicht registrieren oder anderweitig
+                Informationen übermitteln, werden automatisch Informationen allgemeiner Natur erfasst. Diese Informationen
+                (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen
+                Ihres Internet-Service-Providers, Ihre IP-Adresse und ähnliches.
+              </p>
+              <p className="text-[#6b6b6b] leading-relaxed mb-4">
+                Sie werden insbesondere zu folgenden Zwecken verarbeitet:
+              </p>
+              <ul className="list-disc list-inside text-[#6b6b6b] leading-relaxed space-y-2 ml-4 mb-4">
+                <li>Sicherstellung eines problemlosen Verbindungsaufbaus der Website</li>
+                <li>Sicherstellung einer reibungslosen Nutzung unserer Website</li>
+                <li>Auswertung der Systemsicherheit und -stabilität sowie</li>
+                <li>zu weiteren administrativen Zwecken</li>
+              </ul>
               <p className="text-[#6b6b6b] leading-relaxed">
-                Wir nutzen auf dieser Website möglicherweise Analyse-Tools zur statistischen 
-                Auswertung der Besucherzugriffe. Nähere Informationen zu den eingesetzten Tools 
-                finden Sie in unserer Cookie-Richtlinie.
+                Wir verwenden Ihre Daten nicht, um Rückschlüsse auf Ihre Person zu ziehen. Informationen dieser Art
+                werden von uns ggfs. statistisch ausgewertet, um unseren Internetauftritt und die dahinterstehende
+                Technik zu optimieren.
+              </p>
+              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Rechtsgrundlage:</h3>
+              <p className="text-[#6b6b6b] leading-relaxed">
+                Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses
+                an der Verbesserung der Stabilität und Funktionalität unserer Website.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">6. Plugins und Tools</h2>
-              
-              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Google Maps</h3>
-              <p className="text-[#6b6b6b] leading-relaxed">
-                Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland 
-                Limited („Google"), Gordon House, Barrow Street, Dublin 4, Irland. Zur Nutzung 
-                der Funktionen von Google Maps ist es notwendig, Ihre IP-Adresse zu speichern. 
-                Diese Informationen werden in der Regel an einen Server von Google in den USA 
-                übertragen und dort gespeichert.
+              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Server-Log-Dateien</h2>
+              <p className="text-[#6b6b6b] leading-relaxed mb-4">
+                Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien,
+                die Ihr Browser automatisch an uns übermittelt. Dies sind:
               </p>
-
-              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Google Fonts</h3>
+              <ul className="list-disc list-inside text-[#6b6b6b] leading-relaxed space-y-2 ml-4 mb-4">
+                <li>Browsertyp und Browserversion</li>
+                <li>verwendetes Betriebssystem</li>
+                <li>Referrer URL</li>
+                <li>Hostname des zugreifenden Rechners</li>
+                <li>Uhrzeit der Serveranfrage</li>
+                <li>IP-Adresse</li>
+              </ul>
               <p className="text-[#6b6b6b] leading-relaxed">
-                Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte 
-                Google Fonts, die von Google bereitgestellt werden. Beim Aufruf einer Seite lädt 
-                Ihr Browser die benötigten Fonts in ihren Browsercache, um Texte und Schriftarten 
-                korrekt anzuzeigen.
+                Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.<br /><br />
+                Grundlage für die Datenverarbeitung ist Art. 6 Abs. 1 lit. f DSGVO, der die Verarbeitung von Daten
+                zur Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen gestattet.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">7. Ihre Rechte</h2>
+              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Bestandsdaten</h2>
               <p className="text-[#6b6b6b] leading-relaxed">
-                Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger 
-                und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben 
-                außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. 
-                Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese 
-                Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, 
-                unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer 
-                personenbezogenen Daten zu verlangen.<br /><br />
-                Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.<br /><br />
-                Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit 
-                an uns wenden.
+                (1) Ihre personenbezogenen Daten, soweit diese für die Begründung, inhaltliche Ausgestaltung oder
+                Änderung des Vertragsverhältnisses erforderlich sind (Bestandsdaten), werden ausschließlich zur
+                Vertragsabwicklung verwendet. So muss z.B. zur Zustellung der Waren Ihr Name und Ihre Anschrift an
+                den Warenlieferanten weitergegeben werden.<br /><br />
+                (2) Ohne Ihre ausdrückliche Einwilligung oder ohne gesetzliche Grundlage werden Ihre personenbezogenen
+                Daten nicht an außerhalb der Vertragsabwicklung stehende Dritte weitergegeben. Nach vollständiger
+                Vertragsabwicklung werden Ihre Daten für die weitere Verwendung gesperrt. Nach Ablauf der steuer- und
+                handelsrechtlichen Vorschriften werden diese Daten gelöscht, sofern Sie nicht ausdrücklich in die
+                weitere Nutzung eingewilligt haben.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Kontaktformular</h2>
+              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Art und Zweck der Verarbeitung:</h3>
+              <p className="text-[#6b6b6b] leading-relaxed mb-4">
+                Die von Ihnen eingegebenen Daten werden zum Zweck der individuellen Kommunikation mit Ihnen gespeichert.
+                Hierfür ist die Angabe einer validen E-Mail-Adresse sowie Ihres Namens erforderlich. Diese dient der
+                Zuordnung der Anfrage und der anschließenden Beantwortung derselben. Die Angabe weiterer Daten ist optional.
+              </p>
+              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Rechtsgrundlage:</h3>
+              <p className="text-[#6b6b6b] leading-relaxed mb-4">
+                Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt auf der Grundlage eines
+                berechtigten Interesses (Art 6 Abs. 1 lit. f DSGVO).<br /><br />
+                Durch Bereitstellung des Kontaktformulars möchten wir Ihnen eine unkomplizierte Kontaktaufnahme ermöglichen.
+                Ihre gemachten Angaben werden zum Zwecke der Bearbeitung der Anfrage sowie für mögliche Anschlussfragen gespeichert.<br /><br />
+                Sofern Sie mit uns Kontakt aufnehmen, um ein Angebot zu erfragen, erfolgt die Verarbeitung der in das
+                Kontaktformular eingegebenen Daten zur Durchführung vorvertraglicher Maßnahmen (Art 6 Abs. 1 lit. b DSGVO).
+              </p>
+              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Speicherdauer:</h3>
+              <p className="text-[#6b6b6b] leading-relaxed">
+                Daten werden spätestens 6 Monate nach Bearbeitung der Anfrage gelöscht.<br /><br />
+                Sofern es zu einem Vertragsverhältnis kommt, unterliegen wir den gesetzlichen Aufbewahrungsfristen nach HGB
+                und löschen Ihre Daten nach Ablauf dieser Fristen.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Cookies</h2>
+              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Art und Zweck der Verarbeitung:</h3>
+              <p className="text-[#6b6b6b] leading-relaxed mb-4">
+                Wie viele andere Webseiten verwenden wir auch so genannte „Cookies". Cookies sind kleine Textdateien,
+                die von einem Websiteserver auf Ihre Festplatte übertragen werden. Hierdurch erhalten wir automatisch
+                bestimmte Daten wie z. B. IP-Adresse, verwendeter Browser, Betriebssystem und Ihre Verbindung zum Internet.
+              </p>
+              <p className="text-[#6b6b6b] leading-relaxed mb-4">
+                Cookies können nicht verwendet werden, um Programme zu starten oder Viren auf einen Computer zu übertragen.
+                Anhand der in Cookies enthaltenen Informationen können wir Ihnen die Navigation erleichtern und die
+                korrekte Anzeige unserer Webseiten ermöglichen.
+              </p>
+              <p className="text-[#6b6b6b] leading-relaxed mb-4">
+                In keinem Fall werden die von uns erfassten Daten an Dritte weitergegeben oder ohne Ihre Einwilligung
+                eine Verknüpfung mit personenbezogenen Daten hergestellt.
+              </p>
+              <p className="text-[#6b6b6b] leading-relaxed">
+                Natürlich können Sie unsere Website grundsätzlich auch ohne Cookies betrachten. Internet-Browser sind
+                regelmäßig so eingestellt, dass sie Cookies akzeptieren. Im Allgemeinen können Sie die Verwendung von
+                Cookies jederzeit über die Einstellungen Ihres Browsers deaktivieren. Bitte verwenden Sie die Hilfefunktionen
+                Ihres Internetbrowsers, um zu erfahren, wie Sie diese Einstellungen ändern können. Bitte beachten Sie, dass
+                einzelne Funktionen unserer Website möglicherweise nicht funktionieren, wenn Sie die Verwendung von Cookies
+                deaktiviert haben.
+              </p>
+              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Speicherdauer und eingesetzte Cookies:</h3>
+              <p className="text-[#6b6b6b] leading-relaxed mb-4">
+                Soweit Sie uns durch Ihre Browsereinstellungen oder Zustimmung die Verwendung von Cookies erlauben,
+                können folgende Cookies auf unseren Webseiten zum Einsatz kommen:
+              </p>
+              <ul className="list-disc list-inside text-[#6b6b6b] leading-relaxed space-y-2 ml-4">
+                <li>PHPSESSID (Ablauf: Session) - behält die Zustände des Benutzers bei allen Seitenanfragen bei</li>
+                <li>Cloudflare Cookies (__cfruid, __cf_bm, __cf_clearance) - für Sicherheit und Geschwindigkeit</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Verwendung von Google Maps</h2>
+              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Art und Zweck der Verarbeitung:</h3>
+              <p className="text-[#6b6b6b] leading-relaxed mb-4">
+                Auf dieser Webseite nutzen wir das Angebot von Google Maps. Google Maps wird von Google LLC,
+                1600 Amphitheatre Parkway, Mountain View, CA 94043, USA (nachfolgend „Google") betrieben.
+                Dadurch können wir Ihnen interaktive Karten direkt in der Webseite anzeigen und ermöglichen Ihnen
+                die komfortable Nutzung der Karten-Funktion.
+              </p>
+              <p className="text-[#6b6b6b] leading-relaxed mb-4">
+                Nähere Informationen über die Datenverarbeitung durch Google können Sie den Google-Datenschutzhinweisen
+                entnehmen. Dort können Sie im Datenschutzcenter auch Ihre persönlichen Datenschutz-Einstellungen verändern.
+              </p>
+              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Rechtsgrundlage:</h3>
+              <p className="text-[#6b6b6b] leading-relaxed mb-4">
+                Rechtsgrundlage für die Einbindung von Google Maps und dem damit verbundenen Datentransfer zu Google
+                ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
+              </p>
+              <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 mt-4">Empfänger:</h3>
+              <p className="text-[#6b6b6b] leading-relaxed">
+                Durch den Besuch der Webseite erhält Google Informationen, dass Sie die entsprechende Unterseite unserer
+                Webseite aufgerufen haben. Dies erfolgt unabhängig davon, ob Google ein Nutzerkonto bereitstellt, über das
+                Sie eingeloggt sind, oder ob keine Nutzerkonto besteht. Wenn Sie bei Google eingeloggt sind, werden Ihre
+                Daten direkt Ihrem Konto zugeordnet.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Verwendung von Google Analytics</h2>
+              <p className="text-[#6b6b6b] leading-relaxed mb-4">
+                Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Ireland Limited. Google Analytics
+                verwendet sog. „Cookies", Textdateien, die auf dem verwendeten Gerät gespeichert werden und die eine Analyse
+                der Benutzung der Website durch den Seitenbesucher ermöglichen.
+              </p>
+              <p className="text-[#6b6b6b] leading-relaxed mb-4">
+                Google Analytics wird ausschließlich mit der Erweiterung "_anonymizeIp()" auf dieser Website verwendet.
+                Diese Erweiterung stellt eine Anonymisierung der IP-Adresse durch Kürzung sicher und schließt eine direkte
+                Personenbeziehbarkeit aus.
+              </p>
+              <p className="text-[#6b6b6b] leading-relaxed">
+                Die gesendeten und mit Cookies, Nutzerkennungen (z. B. User-ID) oder Werbe-IDs verknüpften Daten werden
+                nach 50 Monaten automatisch gelöscht. Die Löschung von Daten, deren Aufbewahrungsdauer erreicht ist,
+                erfolgt automatisch einmal im Monat.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Änderung unserer Datenschutzbestimmungen</h2>
+              <p className="text-[#6b6b6b] leading-relaxed">
+                Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen
+                Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen,
+                z.B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Fragen zum Datenschutz</h2>
+              <p className="text-[#6b6b6b] leading-relaxed">
+                Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an
+                die für den Datenschutz verantwortliche Person in unserer Organisation:<br /><br />
+                Ahmad Kaddoura<br />
+                {siteConfig.address.street}<br />
+                {siteConfig.address.city}<br /><br />
+                Tel.: {siteConfig.phone}<br />
+                Mobil: {siteConfig.mobile}<br />
+                Fax: {siteConfig.fax}<br />
+                E-Mail: {siteConfig.emailAlt}
               </p>
             </section>
           </div>

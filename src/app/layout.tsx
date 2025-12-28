@@ -22,13 +22,30 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
+  icons: {
+    icon: [
+      { url: '/Logo_neu.jpg', sizes: '32x32', type: 'image/jpeg' },
+      { url: '/Logo_neu.jpg', sizes: '16x16', type: 'image/jpeg' }
+    ],
+    apple: [
+      { url: '/Logo_neu.jpg', sizes: '180x180', type: 'image/jpeg' }
+    ]
+  },
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
-    siteName: siteConfig.name
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: '/Logo_neu.jpg',
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name
+      }
+    ]
   },
   robots: {
     index: true,

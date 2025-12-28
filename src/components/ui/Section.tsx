@@ -13,7 +13,7 @@ const Section = forwardRef<HTMLElement, SectionProps>(
     const variants = {
       default: "bg-[#fafafa]",
       dark: "bg-[#1a1a1a] text-white",
-      accent: "bg-gradient-to-br from-[#c9a227]/10 to-[#c9a227]/5"
+      accent: "bg-gradient-to-br from-[#1a1a1a]/10 to-[#1a1a1a]/5"
     };
     
     const sizes = {

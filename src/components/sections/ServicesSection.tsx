@@ -1,58 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Car, Banknote, Shield, RefreshCw, Wrench, FileCheck, Headphones, Award } from "lucide-react";
+import { Car, Banknote, Shield, RefreshCw, Plane, ClipboardCheck, Headphones, Video } from "lucide-react";
+import { services as servicesData } from "@/data/siteData";
 
-const services = [
-  {
-    icon: Car,
-    title: "Fahrzeugankauf",
-    description: "Wir kaufen Ihr Fahrzeug zu fairen Marktpreisen. Schnelle Abwicklung, sofortige Auszahlung und professionelle Bewertung.",
-    highlight: "Sofortauszahlung"
-  },
-  {
-    icon: Banknote,
-    title: "Finanzierung",
-    description: "Flexible Finanzierungsmöglichkeiten passend zu Ihrem Budget. Günstige Konditionen und schnelle Zusage.",
-    highlight: "Günstige Raten"
-  },
-  {
-    icon: Shield,
-    title: "Garantie",
-    description: "Alle unsere Fahrzeuge kommen mit umfassender Garantie. Fahren Sie sorgenfrei mit voller Absicherung.",
-    highlight: "Volle Absicherung"
-  },
-  {
-    icon: RefreshCw,
-    title: "Inzahlungnahme",
-    description: "Ihr altes Fahrzeug wird fair bewertet und beim Kauf eines neuen Wagens in Zahlung genommen.",
-    highlight: "Faire Bewertung"
-  },
-  {
-    icon: Wrench,
-    title: "Fahrzeugaufbereitung",
-    description: "Jedes Fahrzeug wird vor dem Verkauf professionell aufbereitet und technisch überprüft.",
-    highlight: "Top Zustand"
-  },
-  {
-    icon: FileCheck,
-    title: "TÜV & Zulassung",
-    description: "Wir kümmern uns um HU/AU und Zulassung. Alles aus einer Hand für Ihre Bequemlichkeit.",
-    highlight: "Full Service"
-  },
-  {
-    icon: Headphones,
-    title: "Beratung",
-    description: "Individuelle Beratung ohne Kaufdruck. Wir finden gemeinsam das perfekte Fahrzeug für Sie.",
-    highlight: "Persönlich"
-  },
-  {
-    icon: Award,
-    title: "Qualitätsversprechen",
-    description: "Jedes Fahrzeug durchläuft unsere strenge Qualitätskontrolle. Nur geprüfte Fahrzeuge im Angebot.",
-    highlight: "Geprüfte Qualität"
-  }
-];
+// Icon mapping
+const iconMap: Record<string, any> = {
+  car: Car,
+  banknote: Banknote,
+  shield: Shield,
+  refresh: RefreshCw,
+  plane: Plane,
+  clipboard: ClipboardCheck,
+  video: Video,
+};
 
 export default function ServicesSection() {
   return (
@@ -87,46 +48,42 @@ export default function ServicesSection() {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6
-                       hover:bg-white/10 hover:border-white/30 transition-all duration-500"
-            >
-              {/* Highlight Badge */}
-              <div className="absolute -top-3 right-4">
-                <span className="px-3 py-1 bg-white text-[#1a1a1a] text-xs font-semibold rounded-full">
-                  {service.highlight}
-                </span>
-              </div>
-
-              {/* Icon */}
-              <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-5
-                           group-hover:bg-white/30 transition-colors">
-                <service.icon className="w-7 h-7 text-white" />
-              </div>
-
-              {/* Content */}
-              <h3 
-                className="text-xl font-bold text-white mb-3 tracking-wide"
-                style={{ fontFamily: "var(--font-heading)" }}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {servicesData.map((service, index) => {
+            const IconComponent = iconMap[service.icon] || Car;
+            return (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6
+                         hover:bg-white/10 hover:border-white/30 transition-all duration-500"
               >
-                {service.title}
-              </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                {service.description}
-              </p>
+                {/* Icon */}
+                <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-5
+                             group-hover:bg-white/30 transition-colors">
+                  <IconComponent className="w-7 h-7 text-white" />
+                </div>
 
-              {/* Hover Effect Line */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent
-                           via-white to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-            </motion.div>
-          ))}
+                {/* Content */}
+                <h3
+                  className="text-xl font-bold text-white mb-3 tracking-wide"
+                  style={{ fontFamily: "var(--font-heading)" }}
+                >
+                  {service.title}
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {service.description}
+                </p>
+
+                {/* Hover Effect Line */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent
+                             via-white to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Bottom CTA */}

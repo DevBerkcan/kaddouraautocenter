@@ -33,6 +33,10 @@ export default function VehiclesSection() {
             Entdecken Sie eine Auswahl unserer hochwertigen Gebrauchtwagen. 
             Alle Fahrzeuge sind geprüft und mit Garantie.
           </p>
+          <p className="text-lg text-[#6b6b6b]">
+  Die dargestellten Fahrzeuge sind eine Auswahl unseres Angebots und können zwischenzeitlich bereits verkauft worden sein.
+</p>
+
         </motion.div>
 
         {/* Vehicle Grid */}
@@ -50,16 +54,11 @@ export default function VehiclesSection() {
             >
               {/* Vehicle Image */}
               <div className="relative aspect-[4/3] overflow-hidden">
-                <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700
                            group-hover:scale-110"
                   style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-${
-                      index === 0 ? '1618843479313-40f8afb4b4d8' :
-                      index === 1 ? '1555215695-3004980ad54e' :
-                      index === 2 ? '1606664515524-ed2f786a0bd6' :
-                      '1609521263047-f8f205293f24'
-                    }?q=80&w=800&auto=format&fit=crop')`,
+                    backgroundImage: `url('${vehicle.image}')`,
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

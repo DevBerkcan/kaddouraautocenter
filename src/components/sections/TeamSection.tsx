@@ -32,12 +32,12 @@ export default function TeamSection() {
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a1a1a] mb-4 tracking-wide"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            DIE MENSCHEN
-            <span className="text-[#4a4a4a]"> HINTER VOLVO</span>
+            UNSER TEAM
+            <span className="text-[#4a4a4a]"> FÜR SIE</span>
           </h2>
           <p className="text-lg text-[#6b6b6b]">
             Lernen Sie das Team kennen, das sich täglich für Ihre Zufriedenheit einsetzt.
-            Kompetenz, Erfahrung und Leidenschaft für VOLVO.
+            Kompetenz, Erfahrung und Leidenschaft für hochwertige Fahrzeuge.
           </p>
         </motion.div>
 
@@ -57,17 +57,12 @@ export default function TeamSection() {
                            hover:shadow-xl">
                 {/* Image */}
                 <div className="relative w-full aspect-square mb-6 rounded-xl overflow-hidden bg-gray-200">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-400
-                               flex items-center justify-center">
-                    <Users className="w-20 h-20 text-white/50" />
-                  </div>
-                  {/* Uncomment when images are available */}
-                  {/* <Image
+                  <Image
                     src={member.image}
                     alt={member.name}
                     fill
                     className="object-cover"
-                  /> */}
+                  />
                 </div>
 
                 {/* Content */}
@@ -107,7 +102,7 @@ export default function TeamSection() {
               {
                 icon: Award,
                 title: "Expertise",
-                description: "Langjährige Erfahrung mit VOLVO Fahrzeugen"
+                description: "Über 25 Jahre Erfahrung im Automobilhandel"
               },
               {
                 icon: Heart,
@@ -116,8 +111,8 @@ export default function TeamSection() {
               },
               {
                 icon: Users,
-                title: "Teamgeist",
-                description: "Gemeinsam für den besten Service"
+                title: "Familienunternehmen",
+                description: "Persönlicher Service seit 2000"
               }
             ].map((value, index) => (
               <motion.div

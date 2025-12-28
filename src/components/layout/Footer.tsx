@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Instagram, Phone, Mail, MapPin, Clock, ChevronRight } from "lucide-react";
 import { siteConfig } from "@/data/siteData";
 
@@ -14,27 +15,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 border-2 border-white rounded-lg flex items-center justify-center">
-                <svg
-                  viewBox="0 0 24 24"
-                  className="w-7 h-7 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                >
-                  <path d="M5 17a2 2 0 104 0M15 17a2 2 0 104 0M5 17H3v-4l2-6h10l4 6v4h-2M5 17h10" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M9 11V7M15 11V7" strokeLinecap="round"/>
-                </svg>
-              </div>
-              <div>
-                <span className="text-xs tracking-widest text-gray-400">AUTOCENTER</span>
-                <h2 
-                  className="text-xl font-bold tracking-wider"
-                  style={{ fontFamily: "var(--font-heading)" }}
-                >
-                  KADDOURA
-                </h2>
+            <div className="mb-6">
+              <div className="relative h-16 w-auto max-w-[180px]">
+                <Image
+                  src="/Logo_neu.jpg"
+                  alt="Autocenter Kaddoura Logo"
+                  width={180}
+                  height={64}
+                  className="h-full w-auto object-contain"
+                />
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">

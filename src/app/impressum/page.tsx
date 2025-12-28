@@ -17,7 +17,7 @@ export default function ImpressumPage() {
         <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
           <Link 
             href="/"
-            className="inline-flex items-center gap-2 text-[#c9a227] hover:text-[#a68520] mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-[#1a1a1a] hover:text-[#2d2d2d] mb-8 transition-colors"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -46,32 +46,47 @@ export default function ImpressumPage() {
             <section>
               <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Kontakt</h2>
               <p className="text-[#6b6b6b]">
-                Telefon: {siteConfig.phone}<br />
-                E-Mail: {siteConfig.email}
+                Mobil: {siteConfig.phone}<br />
+                Tel.: {siteConfig.mobile}<br />
+                Fax: {siteConfig.fax}<br />
+                Mail Verkauf: {siteConfig.emailSales}<br />
+                Mail Verwaltung: {siteConfig.email}
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Vertreten durch</h2>
+              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Rechtsform</h2>
               <p className="text-[#6b6b6b]">
-                [Name des Geschäftsführers]
+                Einzelunternehmen
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Registereintrag</h2>
+              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Geschäftsführer / Alleininhaber</h2>
               <p className="text-[#6b6b6b]">
-                Eintragung im Handelsregister<br />
-                Registergericht: Amtsgericht Wuppertal<br />
-                Registernummer: [HRB XXXXX]
+                Rami Kaddoura
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Umsatzsteuer-ID</h2>
+              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Handelsregister</h2>
               <p className="text-[#6b6b6b]">
-                Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br />
-                DE [XXXXXXXXX]
+                Keine Eintragung
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Umsatzsteuer-Identifikationsnummer</h2>
+              <p className="text-[#6b6b6b]">
+                USt-IdNr. gemäß § 27a Umsatzsteuergesetz:<br />
+                {siteConfig.vatId}
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-[#1a1a1a] mb-4">Steuernummer</h2>
+              <p className="text-[#6b6b6b]">
+                {siteConfig.taxNumber}
               </p>
             </section>
 
@@ -92,7 +107,7 @@ export default function ImpressumPage() {
                   href="https://ec.europa.eu/consumers/odr/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-[#c9a227] hover:underline ml-1"
+                  className="text-[#1a1a1a] hover:underline ml-1"
                 >
                   https://ec.europa.eu/consumers/odr/
                 </a>

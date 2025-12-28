@@ -17,7 +17,7 @@ export default function AGBPage() {
         <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
           <Link 
             href="/"
-            className="inline-flex items-center gap-2 text-[#c9a227] hover:text-[#a68520] mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-[#1a1a1a] hover:text-[#2d2d2d] mb-8 transition-colors"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -140,7 +140,7 @@ export default function AGBPage() {
               <p className="text-[#6b6b6b] leading-relaxed">
                 Die Verarbeitung personenbezogener Daten erfolgt gemäß unserer Datenschutzerklärung, 
                 die unter{" "}
-                <Link href="/datenschutz" className="text-[#c9a227] hover:underline">
+                <Link href="/datenschutz" className="text-[#1a1a1a] hover:underline">
                   {siteConfig.url}/datenschutz
                 </Link>{" "}
                 abrufbar ist.
