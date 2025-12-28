@@ -27,8 +27,30 @@ export default function HeroSection() {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-1/4 left-10 w-64 h-64 bg-white/10 rounded-full blur-[100px]" />
-      <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-white/5 rounded-full blur-[120px]" />
+      <motion.div
+        className="absolute top-1/4 left-10 w-64 h-64 bg-white/10 rounded-full blur-[100px]"
+        animate={{
+          y: [0, -20, 0],
+          opacity: [0.1, 0.15, 0.1]
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+      <motion.div
+        className="absolute bottom-1/4 right-10 w-96 h-96 bg-white/5 rounded-full blur-[120px]"
+        animate={{
+          y: [0, 30, 0],
+          opacity: [0.05, 0.1, 0.05]
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center">
@@ -70,28 +92,32 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a
+          <motion.a
             href={siteConfig.mobileDeUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-[#1a1a1a] font-semibold
-                     rounded-xl hover:bg-gray-200 transition-all duration-300 hover:scale-105
+                     rounded-xl hover:bg-gray-200 transition-colors duration-300
                      shadow-lg shadow-white/20 hover:shadow-xl hover:shadow-white/30"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.98 }}
           >
             Zu unseren Fahrzeugen auf Mobile.de
-            <ExternalLink className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </a>
+            <ExternalLink className="w-5 h-5 transition-all group-hover:translate-x-1 group-hover:rotate-12" />
+          </motion.a>
 
-          <button
+          <motion.button
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.98 }}
             onClick={() => {
               const kontakt = document.getElementById("kontakt");
               if (kontakt) kontakt.scrollIntoView({ behavior: "smooth" });
             }}
             className="inline-flex items-center gap-3 px-8 py-4 border-2 border-white text-white font-semibold
-                     rounded-xl hover:bg-white hover:text-[#1a1a1a] transition-all duration-300"
+                     rounded-xl hover:bg-white hover:text-[#1a1a1a] transition-colors duration-300"
           >
             Kontakt aufnehmen
-          </button>
+          </motion.button>
         </motion.div>
 
         {/* Trust Badges */}
@@ -101,35 +127,52 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.9 }}
           className="mt-8 flex items-center justify-center gap-4 flex-wrap"
         >
-          <a
+          <motion.a
             href={siteConfig.mobileDeUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20
                      rounded-full px-6 py-3 hover:bg-white/20 transition-colors group"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+            <motion.div
+              animate={{ rotate: [0, 5, -5, 0] }}
+              transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+            >
+              <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+            </motion.div>
             <span className="text-white font-semibold">{siteConfig.mobileDeRating}/5</span>
             <span className="text-white/60 text-sm group-hover:text-white/80 transition-colors">auf Mobile.de</span>
-          </a>
+          </motion.a>
 
-          <a
+          <motion.a
             href={siteConfig.googleBusinessUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20
                      rounded-full px-6 py-3 hover:bg-white/20 transition-colors group"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+            <motion.div
+              animate={{ rotate: [0, 5, -5, 0] }}
+              transition={{ duration: 2, repeat: Infinity, repeatDelay: 3, delay: 0.5 }}
+            >
+              <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+            </motion.div>
             <span className="text-white font-semibold">{siteConfig.googleRating}/5</span>
             <span className="text-white/60 text-sm group-hover:text-white/80 transition-colors">Google ({siteConfig.googleReviews})</span>
-          </a>
+          </motion.a>
 
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20
-                        rounded-full px-6 py-3">
+          <motion.div
+            className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20
+                        rounded-full px-6 py-3"
+            whileHover={{ scale: 1.05, y: -2 }}
+          >
             <Users className="w-5 h-5 text-white" />
             <span className="text-white/60 text-sm">{siteConfig.mobileDeVisitors}</span>
-          </div>
+          </motion.div>
         </motion.div>
 
         {/* Stats */}

@@ -44,30 +44,43 @@ export default function VehiclesSection() {
           {featuredVehicles.map((vehicle, index) => (
             <motion.div
               key={vehicle.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-white rounded-2xl overflow-hidden shadow-lg shadow-black/5 
-                       hover:shadow-2xl hover:shadow-black/10 transition-all duration-500 
-                       hover:-translate-y-2"
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+                type: "spring",
+                stiffness: 100
+              }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="group bg-white rounded-2xl overflow-hidden shadow-lg shadow-black/5
+                       hover:shadow-2xl hover:shadow-black/20 transition-all duration-300 cursor-pointer"
             >
               {/* Vehicle Image */}
               <div className="relative aspect-[4/3] overflow-hidden">
-                <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700
-                           group-hover:scale-110"
+                <motion.div
+                  className="absolute inset-0 bg-cover bg-center"
                   style={{
                     backgroundImage: `url('${vehicle.image}')`,
                   }}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.4 }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent
+                             group-hover:from-black/40 transition-colors duration-300" />
                 
                 {/* Price Badge */}
-                <div className="absolute top-4 right-4 px-3 py-1.5 bg-[#1a1a1a] text-white text-sm 
-                              font-bold rounded-lg shadow-lg">
+                <motion.div
+                  className="absolute top-4 right-4 px-3 py-1.5 bg-[#1a1a1a] text-white text-sm
+                              font-bold rounded-lg shadow-lg"
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3 + index * 0.1 }}
+                  whileHover={{ scale: 1.1 }}
+                >
                   {formatPrice(vehicle.price)}
-                </div>
+                </motion.div>
 
                 {/* Brand Badge */}
                 <div className="absolute bottom-4 left-4">
@@ -118,17 +131,19 @@ export default function VehiclesSection() {
           <p className="text-[#6b6b6b] mb-6">
             Mehr Fahrzeuge finden Sie auf unserem Mobile.de Account
           </p>
-          <a
+          <motion.a
             href={siteConfig.mobileDeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-[#1a1a1a] text-white font-semibold 
-                     rounded-xl hover:bg-[#2d2d2d] transition-all duration-300 hover:scale-105 
+            className="inline-flex items-center gap-3 px-8 py-4 bg-[#1a1a1a] text-white font-semibold
+                     rounded-xl hover:bg-[#2d2d2d] transition-colors duration-300
                      shadow-lg shadow-black/20 group"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             Alle Fahrzeuge auf Mobile.de
-            <ExternalLink className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </a>
+            <ExternalLink className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:rotate-12" />
+          </motion.a>
         </motion.div>
       </div>
     </section>

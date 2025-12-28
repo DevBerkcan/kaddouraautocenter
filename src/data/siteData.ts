@@ -37,10 +37,10 @@ export const siteConfig = {
   ],
   navigation: [
     { name: "Home", href: "/" },
+    { name: "Über uns", href: "#ueber-uns" },
     { name: "Fahrzeuge", href: "#fahrzeuge" },
     { name: "Services", href: "#services" },
-    { name: "Über uns", href: "#ueber-uns" },
-    { name: "Team", href: "#team" },
+    { name: "Unser Team", href: "#team" },
     { name: "Kontakt", href: "#kontakt" }
   ],
   footerLinks: {
