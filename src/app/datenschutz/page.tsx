@@ -269,7 +269,7 @@ export default function DatenschutzPage() {
                 Tel.: {siteConfig.phone}<br />
                 Mobil: {siteConfig.mobile}<br />
                 Fax: {siteConfig.fax}<br />
-                E-Mail: {siteConfig.emailAlt}
+                E-Mail: {siteConfig.email}
               </p>
             </section>
           </div>
