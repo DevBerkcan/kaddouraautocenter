@@ -235,15 +235,22 @@ export const galleryImages = [
 
 export const teamMembers = [
   {
-    name: "Ahmad Kaddoura",
-    role: "Geschäftsführer",
-    image: "/chef.jpeg",
-    description: "Geschäftsführer und Ihr Hauptansprechpartner für alle Fragen rund um hochwertige Fahrzeuge und unseren Service."
-  },
-  {
     name: "Rami Kaddoura",
     role: "Geschäftsführer",
     image: "/images_rami.jpeg",
+    description: "Geschäftsführer und Ihr Hauptansprechpartner für alle Fragen rund um hochwertige Fahrzeuge und unseren Service."
+  },
+  {
+    name: "Ahmad Kaddoura",
+    role: "Geschäftsführer",
+    image: "/chef.jpeg",
     description: "Geschäftsführer mit langjähriger Expertise im Automobilhandel und persönlicher Kundenbetreuung."
+  },
+  {
+    name: "Jennifer Scholl",
+    role: "Verwaltung",
+    image: "/",
+    description: "Verwaltungsfachkraft, zuständig für Büroorganisation und Kundenanfragen."
   }
+
 ];

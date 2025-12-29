@@ -73,8 +73,7 @@ export default function HeroSection() {
           className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 tracking-wider"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          AUTOCENTER
-          <span className="block text-gray-300">KADDOURA</span>
+          AUTOCENTER KADDOURA
         </motion.h1>
 
         <motion.p
@@ -105,20 +104,7 @@ export default function HeroSection() {
             Zu unseren Fahrzeugen auf Mobile.de
             <ExternalLink className="w-5 h-5 transition-all group-hover:translate-x-1 group-hover:rotate-12" />
           </motion.a>
-
-          <motion.button
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={() => {
-              const kontakt = document.getElementById("kontakt");
-              if (kontakt) kontakt.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="inline-flex items-center gap-3 px-8 py-4 border-2 border-white text-white font-semibold
-                     rounded-xl hover:bg-white hover:text-[#1a1a1a] transition-colors duration-300"
-          >
-            Kontakt aufnehmen
-          </motion.button>
-        </motion.div>
+        </motion.div>'
 
         {/* Trust Badges */}
         <motion.div
