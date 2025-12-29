@@ -48,8 +48,6 @@ export default function ImpressumPage() {
               <p className="text-[#6b6b6b]">
                 Mobil: {siteConfig.phone}<br />
                 Tel.: {siteConfig.mobile}<br />
-                Fax: {siteConfig.fax}<br />
-                Mail Verkauf: {siteConfig.emailSales}<br />
                 Mail Verwaltung: {siteConfig.email}
               </p>
             </section>

@@ -42,7 +42,6 @@ export default function DatenschutzPage() {
                 {siteConfig.address.street}<br />
                 {siteConfig.address.city}<br /><br />
                 Tel.: {siteConfig.phone}<br />
-                Fax: {siteConfig.fax}<br />
                 E-Mail: {siteConfig.email}
               </p>
             </section>
@@ -268,7 +267,6 @@ export default function DatenschutzPage() {
                 {siteConfig.address.city}<br /><br />
                 Tel.: {siteConfig.phone}<br />
                 Mobil: {siteConfig.mobile}<br />
-                Fax: {siteConfig.fax}<br />
                 E-Mail: {siteConfig.email}
               </p>
             </section>
