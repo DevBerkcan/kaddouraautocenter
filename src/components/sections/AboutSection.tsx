@@ -135,56 +135,6 @@ export default function AboutSection() {
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gray-100 rounded-full blur-3xl" />
           </motion.div>
         </div>
-
-        {/* Services Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="bg-[#1a1a1a] rounded-3xl p-8 md:p-12"
-        >
-          <h3
-            className="text-3xl md:text-4xl font-bold text-white mb-8 text-center tracking-wide"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            UNSERE SERVICES FÜR SIE
-          </h3>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {services.map((service, index) => (
-              <motion.div
-                key={service}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="flex items-start gap-3 p-4 bg-white/5 backdrop-blur-sm rounded-xl
-                         border border-white/10 hover:bg-white/10 transition-colors"
-              >
-                <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-0.5" />
-                <p className="text-white text-sm md:text-base leading-relaxed">{service}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-8 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10"
-          >
-            <p className="text-white/90 text-center leading-relaxed">
-              <strong className="text-white">Transparente Bewertung:</strong> Wir bewerten Ihr Auto transparent
-              und bieten Ihnen einen fairen Preis.
-              <br />
-              <strong className="text-white">Rundum-Sorglos:</strong> Auf Wunsch kümmern wir uns um TÜV,
-              Inspektion, DEKRA-Gebrauchtwagencheck, Zulassung und bieten optional eine Gebrauchtwagengarantie
-              für maximale Sicherheit und Komfort.
-            </p>
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );

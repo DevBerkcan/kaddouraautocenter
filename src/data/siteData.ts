@@ -9,6 +9,7 @@ export const siteConfig = {
 
   mobile: "+49 (0)202 2443611",
   email: "info@autocenter-kaddoura.de",
+  emailSales: "rami@autocenter-kaddoura.de",
   address: {
     street: "Friedrich-Ebert-Straße 150",
     city: "42117 Wuppertal",
@@ -173,8 +174,8 @@ export const services = [
     icon: "clipboard"
   },
   {
-    title: "Finanzierung",
-    description: "Flexible Finanzierungslösungen passend zu Ihrem Budget. Wir beraten Sie gerne und finden gemeinsam die beste Lösung für Sie.",
+    title: "Netto-Auslandsverkauf",
+    description: "Wir bieten Ihnen den Verkauf Ihres Fahrzeugs im Netto-Auslandsverkauf an. Profitieren Sie von unseren Erfahrungen und unserem Service für einen reibungslosen Ablauf.",
     icon: "banknote"
   }
 ];
