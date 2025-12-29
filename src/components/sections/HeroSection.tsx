@@ -148,7 +148,7 @@ export default function HeroSection() {
               <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
             </motion.div>
             <span className="text-white font-semibold">{siteConfig.googleRating}/5</span>
-            <span className="text-white/60 text-sm group-hover:text-white/80 transition-colors">Google ({siteConfig.googleReviews})</span>
+            <span className="text-white/60 text-sm group-hover:text-white/80 transition-colors">auf Google ({siteConfig.googleReviews})</span>
           </motion.a>
 
           <motion.div

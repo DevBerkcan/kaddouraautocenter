@@ -31,11 +31,11 @@ export default function VehiclesSection() {
           </h2>
           <p className="text-lg text-[#6b6b6b]">
             Entdecken Sie eine Auswahl unserer hochwertigen Gebrauchtwagen. 
-            Alle Fahrzeuge sind geprüft und mit Garantie.
+            Jedes Fahrzeug wurde sorgfältig geprüft und befindet sich in einem ausgezeichneten Zustand.
           </p>
           <p className="text-lg text-[#6b6b6b]">
-  Die dargestellten Fahrzeuge sind eine Auswahl unseres Angebots und können zwischenzeitlich bereits verkauft worden sein.
-</p>
+          Die dargestellten Fahrzeuge sind eine Auswahl unseres Angebots und können zwischenzeitlich bereits verkauft worden sein.
+        </p>
 
         </motion.div>
 

@@ -5,10 +5,10 @@ export const siteConfig = {
   url: "https://www.autocenterkaddoura.de",
   mobileDeUrl: "https://home.mobile.de/KADDOURA#ses",
   phone: "+49 157 37015935",
+  phone1: "+49 172 2812576",
+
   mobile: "+49 (0)202 2443611",
-  fax: "+49 (0)202 2443613",
   email: "info@autocenter-kaddoura.de",
-  emailSales: "rami@autocenter-kaddoura.de",
   address: {
     street: "Friedrich-Ebert-Straße 150",
     city: "42117 Wuppertal",
@@ -32,7 +32,7 @@ export const siteConfig = {
   },
   openingHours: [
     { day: "Montag - Freitag", time: "09:00 - 18:00 Uhr" },
-    { day: "Samstag", time: "10:00 - 14:00 Uhr" },
+    { day: "Samstag", time: "10:00 - 13:00 Uhr" },
     { day: "Sonntag", time: "Geschlossen" }
   ],
   navigation: [

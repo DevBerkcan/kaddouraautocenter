@@ -7,7 +7,7 @@ import { ChevronDown, HelpCircle } from "lucide-react";
 const faqs = [
   {
     question: "Welche Zahlungsmöglichkeiten bieten Sie an?",
-    answer: "Wir akzeptieren Barzahlung, Banküberweisung und bieten flexible Finanzierungslösungen an. Gerne beraten wir Sie persönlich zu den verschiedenen Finanzierungsmöglichkeiten."
+    answer: "Wir akzeptieren Barzahlung und Banküberweisung."
   },
   {
     question: "Kann ich vor dem Kauf eine Probefahrt machen?",

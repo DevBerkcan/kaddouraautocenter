@@ -118,6 +118,12 @@ export default function ContactSection() {
                     {siteConfig.phone}
                   </a>
                   <a
+                    href={`tel:${siteConfig.phone1}`}
+                    className="text-[#1a1a1a] hover:text-[#2d2d2d] transition-colors font-medium block"
+                  >
+                    {siteConfig.phone1}
+                  </a>
+                  <a
                     href={`tel:${siteConfig.mobile}`}
                     className="text-[#6b6b6b] hover:text-[#2d2d2d] transition-colors block"
                   >
@@ -132,16 +138,10 @@ export default function ContactSection() {
                   <Mail className="w-6 h-6 text-[#1a1a1a]" />
                 </div>
                 <h3 className="font-bold text-[#1a1a1a] mb-2">E-Mail</h3>
-                <div className="text-sm space-y-1">
-                  <a
-                    href={`mailto:${siteConfig.emailSales}`}
-                    className="text-[#1a1a1a] hover:text-[#2d2d2d] transition-colors font-medium block break-all"
-                  >
-                    {siteConfig.emailSales}
-                  </a>
+                <div className="text-sm">
                   <a
                     href={`mailto:${siteConfig.email}`}
-                    className="text-[#6b6b6b] hover:text-[#2d2d2d] transition-colors block break-all"
+                    className="text-[#1a1a1a] hover:text-[#2d2d2d] transition-colors font-medium block break-all"
                   >
                     {siteConfig.email}
                   </a>
