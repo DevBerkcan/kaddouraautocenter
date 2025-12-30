@@ -29,7 +29,7 @@ export const siteConfig = {
   googleBusinessUrl: "https://www.google.com/search?sa=X&sca_esv=d412fff20e7449cb&q=Autocenter+Kaddoura+Rezensionen&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2NjYzNTM1MLMwtTAyMTAzNDI038DI-IpR3rG0JD85Na8ktUjBOzElJb-0KFEhKLUqNa84Mz8vNW8RKyEVAEHMAQxeAAAA&rldimm=3365650685824061217&tbm=lcl&hl=de-DE&ved=2ahUKEwi-xbnio-CRAxVd2wIHHXtTARAQ9fQKegQIJxAG",
   socialMedia: {
     instagram: "https://instagram.com/autocenterkaddoura",
-    whatsapp: "https://wa.me/49202XXXXXXX"
+    whatsapp: "+49 157 37015935"
   },
   openingHours: [
     { day: "Montag - Freitag", time: "09:00 - 18:00 Uhr" },
