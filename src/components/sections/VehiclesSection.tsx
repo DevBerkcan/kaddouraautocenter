@@ -42,8 +42,11 @@ export default function VehiclesSection() {
         {/* Vehicle Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {featuredVehicles.map((vehicle, index) => (
-            <motion.div
+            <motion.a
               key={vehicle.id}
+              href={vehicle.link || siteConfig.mobileDeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -118,7 +121,7 @@ export default function VehiclesSection() {
                   </span>
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 

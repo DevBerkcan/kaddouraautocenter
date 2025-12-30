@@ -42,8 +42,7 @@ export default function ServicesSection() {
             MEHR ALS NUR AUTOHANDEL
           </h2>
           <p className="text-lg text-gray-400">
-            Umfassender Service rund um Ihr Fahrzeug. Von der Beratung bis zur Finanzierung – 
-            alles aus einer Hand.
+            Umfassender Service rund um Ihr Fahrzeug.Wir sind für Sie da – vor, während und nach dem Kauf.
           </p>
         </motion.div>
 

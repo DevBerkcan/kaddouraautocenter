@@ -64,86 +64,62 @@ export const vehicles = [
   {
     id: 1,
     brand: "VOLVO",
-    model: "XC60 B5 Mild Hybrid",
-    year: 2023,
-    mileage: 12000,
-    price: 52900,
-    fuel: "Benzin/Hybrid",
+    model: "V60 B4 Plus Dark",
+    year: 2025,
+    mileage: 19654,
+    price: 36990,
+    fuel: "Benzin",
     transmission: "Automatik",
-    power: "250 PS",
-    image: "/volvo_1.jpeg",
-    alt: "VOLVO XC60 B5 Mild Hybrid 2023 in grau, gepflegter Zustand mit 12.000 km",
+    power: "197 PS",
+    image: "/1767029675652.jpeg",
+    alt: "VOLVO V60 B4 Plus Dark Kombi mit Panoramadach und Harman Kardon",
+    link: "https://home.mobile.de/KADDOURA#des_442746153",
     featured: true
   },
   {
     id: 2,
     brand: "VOLVO",
-    model: "XC40 Recharge Pure Electric",
+    model: "EX30 Ultra AWD Twin Performance",
     year: 2024,
-    mileage: 5000,
-    price: 48900,
+    mileage: 4517,
+    price: 37990,
     fuel: "Elektro",
     transmission: "Automatik",
-    power: "231 PS",
-    image: "/volvo_2.jpeg",
-    alt: "VOLVO XC40 Recharge Pure Electric 2024, Elektrofahrzeug mit nur 5.000 km",
+    power: "428 PS",
+    image: "/1767029685190.jpeg",
+    alt: "VOLVO EX30 Ultra AWD Twin Performance Elektro mit Panoramadach",
+    link: "https://home.mobile.de/KADDOURA#des_443458357",
     featured: true
   },
   {
     id: 3,
     brand: "VOLVO",
-    model: "V60 B4 Diesel",
-    year: 2023,
-    mileage: 18000,
-    price: 42900,
-    fuel: "Diesel",
+    model: "XC60 T6 AWD Plus Black Edition",
+    year: 2025,
+    mileage: 14415,
+    price: 51590,
+    fuel: "Plug-in-Hybrid",
     transmission: "Automatik",
-    power: "197 PS",
-    image: "/volvo_3.jpeg",
-    alt: "VOLVO V60 B4 Diesel 2023 Kombi, sparsam und zuverlässig",
+    power: "398 PS",
+    image: "/1767029697164.jpeg",
+    alt: "VOLVO XC60 T6 AWD Plus Black Edition mit Panoramadach und Standheizung",
+    link: "https://home.mobile.de/KADDOURA#des_442746140",
     featured: true
   },
   {
     id: 4,
     brand: "VOLVO",
-    model: "XC90 B6 Mild Hybrid",
-    year: 2022,
-    mileage: 28000,
-    price: 59900,
-    fuel: "Benzin/Hybrid",
+    model: "XC90 T8 Plus Bright Facelift",
+    year: 2025,
+    mileage: 27260,
+    price: 68890,
+    fuel: "Plug-in-Hybrid",
     transmission: "Automatik",
-    power: "300 PS",
-    image: "/volvo_4.jpeg",
-    alt: "VOLVO XC90 B6 Mild Hybrid 2022, geräumiger Luxus-SUV mit 7 Sitzen",
+    power: "455 PS",
+    image: "/1767029764837.jpeg",
+    alt: "VOLVO XC90 T8 Plus Bright Facelift mit Panoramadach und 360° Kamera",
+    link: "https://home.mobile.de/KADDOURA#des_443093417",
     featured: true
-  },
-  {
-    id: 5,
-    brand: "VOLVO",
-    model: "S60 B5 Mild Hybrid",
-    year: 2023,
-    mileage: 15000,
-    price: 44900,
-    fuel: "Benzin/Hybrid",
-    transmission: "Automatik",
-    power: "250 PS",
-    image: "/volvo_5.jpeg",
-    alt: "VOLVO S60 B5 Mild Hybrid 2023 Limousine, elegant und effizient",
-    featured: false
-  },
-  {
-    id: 6,
-    brand: "VOLVO",
-    model: "V90 Cross Country",
-    year: 2022,
-    mileage: 32000,
-    price: 49900,
-    fuel: "Diesel",
-    transmission: "Automatik",
-    power: "197 PS",
-    image: "/volvo_6.jpeg",
-    alt: "VOLVO V90 Cross Country 2022, robuster Allrad-Kombi für jedes Gelände",
-    featured: false
   }
 ];
 
@@ -182,22 +158,46 @@ export const services = [
 
 export const testimonials = [
   {
-    name: "Thomas M.",
-    text: "Hervorragender Service! Die Beratung war kompetent und das Fahrzeug genau wie beschrieben. Absolut empfehlenswert.",
+    name: "Fabian Fromm",
+    text: "Ich habe vor kurzem einen XC90 beim Autocenter Kaddoura gekauft und bin absolut begeistert. Besonders hervorheben möchte ich den Verkäufer und Eigentümer Rami – äußerst freundlich, kompetent und ehrlich. Vom ersten Kontakt bis zur Fahrzeugübergabe lief alles reibungslos und professionell ab.",
     rating: 5,
-    date: "November 2024"
+    date: "vor 2 Wochen"
   },
   {
-    name: "Sarah K.",
-    text: "Schnelle und unkomplizierte Abwicklung. Das Autocenter Kaddoura ist mein Ansprechpartner für Gebrauchtwagen.",
+    name: "Ronni Holzapfel",
+    text: "So macht Autokauf Spaß. Unkompliziert, freundlich, ehrlich, zuverlässig. Herr Kaddoura hat das Fahrzeug ausführlich erklärt. Ein sehr sympathisches Unternehmen. Nettes Gespräch bei der Abholung. Wir sind sehr zufrieden mit dem Kauf und wünschen dem Unternehmen weiterhin viel Erfolg. Für uns ein klares Weiterempfehlen. Danke Herr Kaddoura",
     rating: 5,
-    date: "Oktober 2024"
+    date: "vor 1 Monat"
   },
   {
-    name: "Michael B.",
-    text: "Faire Preise und ehrliche Beratung. So stelle ich mir einen vertrauenswürdigen Autohändler vor.",
+    name: "Rene Deutsch",
+    text: "Von A bis Z alles bestens, vom Erstgespräch bis zur Übergabe eines wunderschönen XC90! Absolut weiterzuempfehlen",
     rating: 5,
-    date: "September 2024"
+    date: "vor 3 Wochen"
+  },
+  {
+    name: "Dieter Schulte",
+    text: "Ich habe bei Herrn Kaddoura einen wunderschönen Volvo XC60 B4 Diesel gekauft. Der mit VOLVOs vollgestellte ehemalige Tankstellenbetrieb sieht nicht wie ein Premiummarkenbetrieb aus, Herr Kaddoura bietet günstige junge Volvos von guter Qualität an. Ich bin mit meinem Auto sehr zufrieden und kann Herrn Kaddoura und sein Team sehr empfehlen.",
+    rating: 5,
+    date: "vor 2 Monaten"
+  },
+  {
+    name: "Mo Ghazaleh",
+    text: "Ich habe 5 Sterne gesehen seit 10 Jahren. Volvo 90 R-Design beauftragt einzukaufen. ⭐️ Für schnelle Umsetzung wie immer ⭐️ Ehrliche Beratung von A-Z ⭐️ Vertrauenswürdig durch Transparenz ⭐️ Sehr faire Preise ⭐️ Engagiert",
+    rating: 5,
+    date: "vor 1 Monat"
+  },
+  {
+    name: "Dr. Hermann Teutemacher",
+    text: "Ich bin seit mehr als 13 Jahren bei Herrn Kaddoura, meinen aktuellen Volvo fahre ich seit 3 Jahren und werde auch wohl nie mehr woanders meine Autos kaufen; ich bin in allen mir wichtigen Aspekten sehr zufrieden; Fairness, Zuverlässigkeit, Engagement, wenn ich mal ein Problem habe, Freundlichkeit und Herzlichkeit auch des Personals.",
+    rating: 5,
+    date: "vor 3 Monaten"
+  },
+  {
+    name: "Sami Alkhatib",
+    text: "Ich habe vor Kurzem für mich privat ein Fahrzeug, einen Volvo XC90, beim AutoCenter Kaddoura erworben. Der gesamte Kaufablauf war äußerst professionell und angenehm. Herr Kaddoura war sehr hilfsbereit, und alles lief reibungslos. Ich kann das Autohaus absolut weiterempfehlen und bedanke mich für den hervorragenden Service.",
+    rating: 5,
+    date: "vor 2 Wochen"
   }
 ];
 
@@ -244,7 +244,7 @@ export const teamMembers = [
   {
     name: "Ahmad Kaddoura",
     role: "Geschäftsführer",
-    image: "/chef.jpeg",
+    image: "/chef.jpg",
     description: "Geschäftsführer mit langjähriger Expertise im Automobilhandel und persönlicher Kundenbetreuung."
   },
   {
